@@ -31,7 +31,17 @@
 			
 			ans3(){
 				if (this.b !=0){
-					document.write((this.a*this.x)/this.b + "; ");
+					var s = 1;
+					var l = Math.floor((this.a*this.x) / (this.b));
+					if (l == 0) {
+						document.write( "1; ");
+					}
+					else{
+						for (var i = 1; i != l+1;i++) {
+							s*=i;
+						}
+						document.write(s +"; ")
+					}
 				}
 				else{
 					document.write("деление на 0; ");
@@ -124,7 +134,7 @@
 	
 	<input type="submit" value="3*x+5" onclick="Ansfer1()">
 	<input type="submit" value="a+b/b-a" onclick="Ansfer2()">
-	<input type="submit" value="a*x/b" onclick="Ansfer3()">
+	<input type="submit" value="a*x/b!" onclick="Ansfer3()">
 	
 </body>
 </html>
